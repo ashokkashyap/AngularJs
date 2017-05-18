@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+	<title></title>
+</head>
+<body>
+<div ng-app="" ng-init="points=[1,2,3,4,5,6]">  
+<p> {{points[3]}}</p>
+<p> <span ng-bind="points[1]">    </span></p>
+<ul>
+	
+	<li ng-repeat="x in points">
+		 {{x}}
+
+	</li>
+</ul>
+</div>
+</body>
+</html>
