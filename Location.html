@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+	<title></title>
+</head>
+<body>
+<div ng-app="MyApp" ng-controller="MyController">
+	<h3>
+		{{URL}}
+
+	</h3>
+</div>
+<script>
+	
+var app = angular.module('MyApp',[]);
+app.controller('MyController', function($scope,$location){
+	$scope.URL=$location.absUrl();
+});
+
+
+</script>
+
+
+</body>
+</html>
