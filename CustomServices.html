@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div  ng-app="MyApp" ng-controller="MyController">
+	
+ <h1>{{theTime}}</h1>
+
+</div>;
+
+<script>
+var app = angular.module('MyApp', []);
+app.controller('MyController', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+</body>
+</html>
